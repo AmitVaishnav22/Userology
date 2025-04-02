@@ -9,12 +9,12 @@ export default function NewsSection() {
   useEffect(() => {
     getCryptoNews()
       .then((response) => {
-        console.log("News Data:", response.data);
+        //console.log("News Data:", response.data);
         setNews(response.data.results); 
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Error fetching news:", err);
+        //console.error("Error fetching news:", err);
         setError("Failed to load news.");
         setLoading(false);
       });
